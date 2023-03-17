@@ -1,22 +1,32 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
+// import { useNavigate } from "react-router-dom";
+import Input from "../../components/Input";
 import { publicPost } from "../../utilities/apiCaller";
 
 const SignUp = () => {
-  const emailRef = useRef();
-  const passwordRef = useRef();
-  const idRef = useRef();
-  const nameRef = useRef();
+  const [id, setId] = useState();
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+
+  //   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log({
+      id: id,
+      name: name,
+      email: email,
+      password: password,
+    });
     try {
       const response = await publicPost(
         "/user/signup",
         JSON.stringify({
-          id: idRef.current.value,
-          name: nameRef.current.value,
-          email: emailRef.current.value,
-          password: passwordRef.current.value,
+          id: id,
+          name: name,
+          email: email,
+          password: password,
         })
       );
       console.log(response);
@@ -31,54 +41,33 @@ const SignUp = () => {
           <span className="item-center mb-4 block w-full text-xl font-bold">
             CineCritique
           </span>
-
           <form className="mb-4" onSubmit={handleSubmit}>
-            <label className="mb-1 block text-xs" htmlFor="Id">
-              Id
-            </label>
-            <input
-              className="focus:shadow-outline w-full rounded border p-1.5 text-xs outline-none"
-              ref={idRef}
+            <Input
+              label="Id"
               type="number"
-              id="id"
+              value={id}
+              onChange={(e) => setId(e.target.value)}
             />
-            <br />
-
-            <label className="mb-1 block text-xs" htmlFor="name">
-              Name
-            </label>
-            <input
-              className="focus:shadow-outline w-full rounded border p-1.5 text-xs outline-none"
-              ref={nameRef}
+            <Input
+              label="Name"
               type="text"
-              id="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
-            <br />
-
-            <label className="mb-1 block text-xs" htmlFor="email">
-              Email
-            </label>
-            <input
-              className="focus:shadow-outline w-full rounded border p-1.5 text-xs outline-none"
-              ref={emailRef}
+            <Input
+              label="Email"
               type="email"
-              id="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
-            <br />
-
-            <label className="mb-1 block text-xs" htmlFor="password">
-              Password
-            </label>
-            <input
-              className="focus:shadow-outline mb-2 w-full rounded border p-1.5 text-xs outline-none"
-              ref={passwordRef}
+            <Input
+              label="Password"
               type="password"
-              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
-            <br />
-
             <button
-              className="rounded bg-green-500 px-2.5 py-1 text-sm  uppercase text-white hover:bg-green-700"
+              className="rounded bg-green-500 px-2.5 py-1 text-xs text-white hover:bg-green-600"
               type="submit"
             >
               Sign Up
