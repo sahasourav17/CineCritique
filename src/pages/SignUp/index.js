@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-// import { useNavigate } from "react-router-dom";
-import Input from "../../components/Input";
+import { Button, Input } from "../../components/index";
 import { publicPost } from "../../utilities/apiCaller";
+// import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const [id, setId] = useState();
@@ -66,12 +66,7 @@ const SignUp = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <button
-              className="rounded bg-green-500 px-2.5 py-1 text-xs text-white hover:bg-green-600"
-              type="submit"
-            >
-              Sign Up
-            </button>
+            <Button label="Signup" />
           </form>
         </div>
       </div>
