@@ -3,7 +3,7 @@ import { Button, Input } from "../../components/index";
 import { publicPost } from "../../utilities/apiCaller";
 import { useNavigate } from "react-router-dom";
 
-const SignUp = () => {
+const SignIn = () => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
@@ -57,4 +57,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default SignIn;
