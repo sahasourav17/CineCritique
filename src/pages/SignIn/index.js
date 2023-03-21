@@ -29,7 +29,7 @@ const SignIn = () => {
   };
   return (
     <>
-      <div className="flex h-screen w-full items-center">
+      <div className="flex h-screen w-full items-center bg-rainblue-50">
         <div className="m-4 w-full rounded bg-white p-8 shadow-lg md:mx-auto md:max-w-sm">
           <span className="mb-4 block h-6 w-full text-center text-xl font-bold">
             CineCritique

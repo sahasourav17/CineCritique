@@ -32,12 +32,12 @@ const SignUp = () => {
   };
   return (
     <>
-      <div className="flex h-screen w-full items-center">
+      <div className="flex h-screen w-full items-center bg-rainblue-50">
         <div className="m-4 w-full rounded bg-white p-8 shadow-lg md:mx-auto md:max-w-sm">
           <span className="mb-4 block w-full text-center text-xl font-bold">
             CineCritique
           </span>
-          <p className="mb-2 text-left text-sm text-green-600">{message}</p>
+          <p className="text-green-600 mb-2 text-left text-sm">{message}</p>
           <form className="mb-4" onSubmit={handleSubmit}>
             <Input
               label="Name"
