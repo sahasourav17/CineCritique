@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 import { Button, Input } from "../../components/index";
 import { publicPost } from "../../utilities/apiCaller";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
   const [name, setName] = useState("");
@@ -9,7 +10,7 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
 
-  //   const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,12 +24,25 @@ const SignUp = () => {
         })
       );
       setMessage(response.message);
+
+      toast.success("🦄 Wow Account created! Please login", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+      navigate("/signin");
     } catch (err) {
       setMessage("Please Try Again!");
+      console.log("Error");
+      setEmail("");
+      setName("");
+      setPassword("");
     }
-    setEmail("");
-    setName("");
-    setPassword("");
   };
   return (
     <>
@@ -57,7 +71,7 @@ const SignUp = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <Button label="Signup" />
+            <Button label="Sign Up" />
           </form>
         </div>
       </div>
