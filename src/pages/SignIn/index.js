@@ -20,7 +20,6 @@ const SignUp = () => {
           password: password,
         })
       );
-      console.log(response);
       if (response.message === "Signin successful") {
         navigate("/");
       }
