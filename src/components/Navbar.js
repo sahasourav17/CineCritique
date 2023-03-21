@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
+import logo from "../logo.png";
 export const Navbar = () => {
   const [showBurgerMenu, setShowBurgerMenu] = useState(true);
 
@@ -9,8 +10,9 @@ export const Navbar = () => {
       <header className="bg-opacity-0 sm:mx-auto sm:flex sm:w-4/5 sm:items-center sm:justify-between sm:py-4 sm:pl-4 sm:pr-2">
         <div className="flex items-center justify-between px-4 py-4 sm:p-0">
           <div>
-            {/* <img className="h-6" /> */}
-            <h3 className="font-semibold italic text-white">CineCritique</h3>
+            <NavLink to="/">
+              <img className="h-8 font-bold" src={logo} alt="" />
+            </NavLink>
           </div>
           <div>
             <button
@@ -57,7 +59,7 @@ export const Navbar = () => {
 
           <NavLink
             className="font-sm block rounded px-2 py-1 text-white hover:bg-rainblue-50 sm:mt-0 sm:ml-4"
-            to="user/signin"
+            to="/signin"
           >
             LogOut
           </NavLink>

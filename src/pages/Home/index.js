@@ -6,7 +6,7 @@ const Home = () => {
     <>
       <div className="bg-rainblue-100">
         <Navbar />
-        <h1 className="my-6 text-center text-3xl font-bold">Home</h1>
+        <h1 className="my-6 text-center text-3xl font-bold text-white">Home</h1>
       </div>
     </>
   );

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, Input } from "../../components/index";
 import { publicPost } from "../../utilities/apiCaller";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 
 const SignIn = () => {
   const [name, setName] = useState("");
@@ -31,10 +31,10 @@ const SignIn = () => {
     <>
       <div className="flex h-screen w-full items-center">
         <div className="m-4 w-full rounded bg-white p-8 shadow-lg md:mx-auto md:max-w-sm">
-          <span className="mb-4 block w-full text-center text-xl font-bold">
+          <span className="mb-4 block h-6 w-full text-center text-xl font-bold">
             CineCritique
           </span>
-          <p className="mb-2 text-left text-sm text-green-600">{message}</p>
+          <p className="text-green-600 mb-2 text-left text-sm">{message}</p>
           <form className="mb-4" onSubmit={handleSubmit}>
             <Input
               label="Name"
@@ -48,7 +48,12 @@ const SignIn = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <p className="text mb-2 text-left text-teal-500">Create Account</p>
+            <p className="text text-teal-500 mb-2 text-left text-sm">
+              Don't have an account?
+              <NavLink className="pl-1 text-rainblue-100" to="/signup">
+                Signup
+              </NavLink>
+            </p>
             <Button label="Sign In" />
           </form>
         </div>
