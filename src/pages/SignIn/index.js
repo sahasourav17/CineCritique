@@ -23,7 +23,7 @@ const SignIn = () => {
       );
       if (response.message === "Signin successful") {
         localStorage.setItem("token", JSON.stringify(response.token));
-        toast.success("🦄 Wow Account created! Please login", {
+        toast.success("🦄 Login Successful", {
           position: "bottom-right",
           autoClose: 5000,
           hideProgressBar: false,
