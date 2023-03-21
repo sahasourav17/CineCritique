@@ -51,7 +51,7 @@ const SignUp = () => {
           <span className="mb-4 block w-full text-center text-xl font-bold">
             CineCritique
           </span>
-          <p className="text-green-600 mb-2 text-left text-sm">{message}</p>
+          <p className="mb-2 text-left text-sm text-red-600">{message}</p>
           <form className="mb-4" onSubmit={handleSubmit}>
             <Input
               label="Name"

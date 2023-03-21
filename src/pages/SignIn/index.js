@@ -22,7 +22,7 @@ const SignIn = () => {
         })
       );
       if (response.message === "Signin successful") {
-        localStorage.setItem("token", JSON.stringify(response.token));
+        sessionStorage.setItem("token", JSON.stringify(response.token));
         toast.success("🦄 Login Successful", {
           position: "bottom-right",
           autoClose: 5000,
@@ -46,7 +46,7 @@ const SignIn = () => {
           <span className="mb-4 block h-6 w-full text-center text-xl font-bold">
             CineCritique
           </span>
-          <p className="text-green-600 mb-2 text-left text-sm">{message}</p>
+          <p className="mb-2 text-left text-sm text-red-600">{message}</p>
           <form className="mb-4" onSubmit={handleSubmit}>
             <Input
               label="Name"
