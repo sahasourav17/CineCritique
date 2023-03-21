@@ -4,6 +4,9 @@ import { NavLink } from "react-router-dom";
 import logo from "../logo.png";
 const Navbar = () => {
   const [showBurgerMenu, setShowBurgerMenu] = useState(true);
+  const handleLogOut = () => {
+    sessionStorage.removeItem("token");
+  };
 
   return (
     <>
@@ -60,6 +63,7 @@ const Navbar = () => {
           <NavLink
             className="font-sm block rounded px-2 py-1 text-white hover:bg-rainblue-50 sm:mt-0 sm:ml-4"
             to="/signin"
+            onClick={handleLogOut}
           >
             LogOut
           </NavLink>
