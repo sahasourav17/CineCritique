@@ -4,50 +4,41 @@ import { publicPost } from "../../utilities/apiCaller";
 // import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
-  const [id, setId] = useState();
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
-  const [password, setPassword] = useState();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [message, setMessage] = useState("");
 
   //   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log({
-      id: id,
-      name: name,
-      email: email,
-      password: password,
-    });
     try {
       const response = await publicPost(
         "/user/signup",
         JSON.stringify({
-          id: id,
           name: name,
           email: email,
           password: password,
         })
       );
-      console.log(response);
+      setMessage(response.message);
     } catch (err) {
-      console.log("Some error occured during signing up: ", err);
+      setMessage("Please Try Again!");
     }
+    setEmail("");
+    setName("");
+    setPassword("");
   };
   return (
     <>
       <div className="flex h-screen w-full items-center">
         <div className="m-4 w-full rounded bg-white p-8 shadow-lg md:mx-auto md:max-w-sm">
-          <span className="item-center mb-4 block w-full text-xl font-bold">
+          <span className="mb-4 block w-full text-center text-xl font-bold">
             CineCritique
           </span>
+          <p className="mb-2 text-left text-sm text-green-600">{message}</p>
           <form className="mb-4" onSubmit={handleSubmit}>
-            <Input
-              label="Id"
-              type="number"
-              value={id}
-              onChange={(e) => setId(e.target.value)}
-            />
             <Input
               label="Name"
               type="text"
