@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 import { Button, Input } from "../../components/index";
 import { publicPost } from "../../utilities/apiCaller";
 import { NavLink, useNavigate } from "react-router-dom";
@@ -21,6 +22,17 @@ const SignIn = () => {
         })
       );
       if (response.message === "Signin successful") {
+        localStorage.setItem("token", JSON.stringify(response.token));
+        toast.success("🦄 Wow Account created! Please login", {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
         navigate("/");
       }
     } catch (err) {
@@ -48,7 +60,7 @@ const SignIn = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <p className="text text-teal-500 mb-2 text-left text-sm">
+            <p className="text text-teal-500 mb-4 text-left text-sm">
               Don't have an account?
               <NavLink className="pl-1 text-rainblue-100" to="/signup">
                 Signup

@@ -8,6 +8,7 @@ const Input = (props) => {
         className="mb-2 w-full rounded border p-1.5 text-xs outline-none"
         type={props.type}
         onChange={props.onChange}
+        value={props.value}
         required
       />
     </>
