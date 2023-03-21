@@ -10,7 +10,7 @@ export const Navbar = () => {
         <div className="flex items-center justify-between px-4 py-4 sm:p-0">
           <div>
             {/* <img className="h-6" /> */}
-            <h3 className="font-semibold italic">CineCritique</h3>
+            <h3 className="font-semibold italic text-white">CineCritique</h3>
           </div>
           <div>
             <button
@@ -42,22 +42,22 @@ export const Navbar = () => {
           }
         >
           <NavLink
-            className="text-black font-sm block rounded px-2 py-1 hover:bg-rainblue-50 sm:mt-0"
+            className="font-sm block rounded px-2 py-1 text-white hover:bg-rainblue-50 sm:mt-0"
             to="/"
           >
             Home
           </NavLink>
 
           <NavLink
-            className="text-black font-sm block rounded px-2 py-1 hover:bg-rainblue-50 sm:mt-0 sm:ml-4"
+            className="font-sm block rounded px-2 py-1 text-white hover:bg-rainblue-50 sm:mt-0 sm:ml-4"
             to="/"
           >
             Movies
           </NavLink>
 
           <NavLink
-            className="text-black font-sm block rounded px-2 py-1 hover:bg-rainblue-50 sm:mt-0 sm:ml-4"
-            to="/signin"
+            className="font-sm block rounded px-2 py-1 text-white hover:bg-rainblue-50 sm:mt-0 sm:ml-4"
+            to="user/signin"
           >
             LogOut
           </NavLink>
