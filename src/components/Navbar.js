@@ -65,7 +65,7 @@ const Navbar = () => {
             to="/signin"
             onClick={handleLogOut}
           >
-            LogOut
+            Logout
           </NavLink>
         </div>
       </header>
