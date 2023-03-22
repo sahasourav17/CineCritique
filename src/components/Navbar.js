@@ -62,6 +62,13 @@ const Navbar = () => {
 
           <NavLink
             className="font-sm block rounded px-2 py-1 text-white hover:bg-rainblue-50 sm:mt-0 sm:ml-4"
+            to="/dashboard"
+          >
+            Dashboard
+          </NavLink>
+
+          <NavLink
+            className="font-sm block rounded px-2 py-1 text-white hover:bg-rainblue-50 sm:mt-0 sm:ml-4"
             to="/signin"
             onClick={handleLogOut}
           >
