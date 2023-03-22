@@ -37,6 +37,7 @@ const SignIn = () => {
       }
     } catch (err) {
       setMessage("Please Try Again!");
+      setPassword("");
     }
   };
   return (
@@ -46,8 +47,7 @@ const SignIn = () => {
           <span className="mb-4 block h-6 w-full text-center text-xl font-bold">
             CineCritique
           </span>
-          <p className="mb-2 text-left text-sm text-red-600">{message}</p>
-          <form className="mb-4" onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit}>
             <Input
               label="Name"
               type="text"
@@ -60,13 +60,15 @@ const SignIn = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <p className="text text-teal-500 mb-4 text-left text-sm">
-              Don't have an account?
+            <p className="mb-2 text-left text-sm text-red-600">{message}</p>
+            <Button label="Sign In" />
+            <hr class="my-3 h-1 w-full rounded border-0 bg-gray-200 dark:bg-gray-700"></hr>
+            <p className="text text-teal-500 mt-2  text-center text-sm">
+              New to CineCritique?
               <NavLink className="pl-1 text-rainblue-100" to="/signup">
-                Signup
+                Create Account
               </NavLink>
             </p>
-            <Button label="Sign In" />
           </form>
         </div>
       </div>
