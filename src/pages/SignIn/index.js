@@ -53,12 +53,14 @@ const SignIn = () => {
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              placeholder="Enter your username"
             />
             <Input
               label="Password"
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              placeholder="Enter your password"
             />
             <p className="mb-2 text-left text-sm text-red-600">{message}</p>
             <Button label="Sign In" />
