@@ -16,7 +16,7 @@ const Home = () => {
 
   const handleSearch = async (e) => {
     e.preventDefault();
-    if (movieName !== null) {
+    if (movieName.length !== 0) {
       try {
         setIsLoading(true);
         const endpoint = "/movie/name/" + movieName;
