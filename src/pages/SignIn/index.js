@@ -8,7 +8,6 @@ const SignIn = () => {
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState("");
-
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -23,6 +22,7 @@ const SignIn = () => {
       );
       if (response.message === "Signin successful") {
         sessionStorage.setItem("token", JSON.stringify(response.token));
+        navigate("/");
         toast.success("🦄 Login Successful", {
           position: "bottom-right",
           autoClose: 5000,
@@ -33,7 +33,6 @@ const SignIn = () => {
           progress: undefined,
           theme: "light",
         });
-        navigate("/");
       }
     } catch (err) {
       setMessage("Please Try Again!");

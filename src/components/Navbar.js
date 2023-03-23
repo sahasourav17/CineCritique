@@ -59,6 +59,12 @@ const Navbar = () => {
           >
             Movies
           </NavLink>
+          <NavLink
+            className="block rounded px-2 py-1 font-bold text-white hover:bg-rainblue-50 sm:mt-0 sm:ml-4"
+            to="/dashboard"
+          >
+            Dashboard
+          </NavLink>
 
           <NavLink
             className="block rounded px-2 py-1 font-bold text-white hover:bg-rainblue-50 sm:mt-0 sm:ml-4"
