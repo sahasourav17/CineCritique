@@ -20,9 +20,10 @@ const SignIn = () => {
           password: password,
         })
       );
-      if (response.message === "Signin successful") {
+      if (response.token) {
         sessionStorage.setItem("token", JSON.stringify(response.token));
         navigate("/");
+        window.location.reload(true);
         toast.success("🦄 Login Successful", {
           position: "bottom-right",
           autoClose: 5000,
@@ -33,9 +34,11 @@ const SignIn = () => {
           progress: undefined,
           theme: "light",
         });
+      } else {
+        setMessage("Please try again.");
       }
     } catch (err) {
-      setMessage("Please Try Again!");
+      setMessage(err.message);
       setPassword("");
     }
   };
