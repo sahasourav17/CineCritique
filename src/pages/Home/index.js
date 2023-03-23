@@ -16,18 +16,20 @@ const Home = () => {
 
   const handleSearch = async (e) => {
     e.preventDefault();
-    try {
-      setIsLoading(true);
-      const endpoint = "/movie/name/" + movieName;
-      const response = await publicGet(endpoint);
-      if (response.data.status === 200) {
-        setData(response.data.data);
+    if (movieName !== null) {
+      try {
+        setIsLoading(true);
+        const endpoint = "/movie/name/" + movieName;
+        const response = await publicGet(endpoint);
+        if (response.data.status === 200) {
+          setData(response.data.data);
+        }
+      } catch (err) {
+        alert("Movie not found!");
       }
-    } catch (err) {
-      alert("Movie not found!");
+      setIsLoading(false);
+      setMovieName("");
     }
-    setIsLoading(false);
-    setMovieName("");
   };
   return (
     <>
