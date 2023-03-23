@@ -10,17 +10,14 @@ const Home = () => {
   const [isLoading, setIsLoading] = useState(false);
   const token = sessionStorage.getItem("token");
   let isAuthenticated = false;
-  if (token !== null) {
-    isAuthenticated = true;
-  }
+  if (token !== null) isAuthenticated = true;
 
   const handleSearch = async (e) => {
     e.preventDefault();
     if (movieName.length !== 0) {
       try {
         setIsLoading(true);
-        const endpoint = "/movie/name/" + movieName;
-        const response = await publicGet(endpoint);
+        const response = await publicGet("/movie/name/" + movieName);
         if (response.data.status === 200) {
           setData(response.data.data);
         }
@@ -37,9 +34,6 @@ const Home = () => {
         <>
           <div className="bg-rainblue-100">
             <Navbar />
-            <h1 className="my-6 text-center text-3xl font-bold text-white">
-              Home
-            </h1>
             <form
               className=" flex items-center justify-center p-2"
               onSubmit={handleSearch}
