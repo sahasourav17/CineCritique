@@ -23,11 +23,6 @@ A web application written in React and Node.js that allows users to get movie de
 
 **Note: Currently, the backend repository is private.**
 
-## Known Bugs
-
-- Sometimes, successfull login can't redirected to the protected `Homepage`.
-- Shows moviecard even if movie details not found
-
 ## Ackowledgement
 
 Mentors of [Spring Rain](https://springrain.io/)'s `"Career Development Program"` assigned this project's backend development as a team project and frontend as individual work.
