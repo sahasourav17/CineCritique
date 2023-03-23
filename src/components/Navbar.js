@@ -47,32 +47,31 @@ const Navbar = () => {
           }
         >
           <NavLink
-            className="font-sm block rounded px-2 py-1 text-white hover:bg-rainblue-50 sm:mt-0"
+            className="block rounded px-2 py-1 font-bold text-white hover:bg-rainblue-50 sm:mt-0"
             to="/"
           >
             Home
           </NavLink>
 
           <NavLink
-            className="font-sm block rounded px-2 py-1 text-white hover:bg-rainblue-50 sm:mt-0 sm:ml-4"
+            className="block rounded px-2 py-1 font-bold text-white hover:bg-rainblue-50 sm:mt-0 sm:ml-4"
             to="/"
           >
             Movies
           </NavLink>
-
           <NavLink
-            className="font-sm block rounded px-2 py-1 text-white hover:bg-rainblue-50 sm:mt-0 sm:ml-4"
+            className="block rounded px-2 py-1 font-bold text-white hover:bg-rainblue-50 sm:mt-0 sm:ml-4"
             to="/dashboard"
           >
             Dashboard
           </NavLink>
 
           <NavLink
-            className="font-sm block rounded px-2 py-1 text-white hover:bg-rainblue-50 sm:mt-0 sm:ml-4"
+            className="block rounded px-2 py-1 font-bold text-white hover:bg-rainblue-50 sm:mt-0 sm:ml-4"
             to="/signin"
             onClick={handleLogOut}
           >
-            LogOut
+            Logout
           </NavLink>
         </div>
       </header>
