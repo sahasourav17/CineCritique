@@ -27,7 +27,7 @@ const SignUp = () => {
         );
         setMessage(response.message);
 
-        toast.success("🦄 Wow Account created! Please login", {
+        toast.success("🦄 Account created! Please login", {
           position: "bottom-right",
           autoClose: 5000,
           hideProgressBar: false,
