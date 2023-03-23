@@ -8,7 +8,7 @@ const Newsletter = () => {
           <h2 className="mb-4 text-center text-xl font-medium uppercase text-white">
             Subscribe to our newsletter for more update
           </h2>
-          <p className="p-1.5 text-center">
+          <p className="pb-4 text-center">
             we're here to bring you the latest updates and recommendations to
             make your movie-watching experience even better. To get personalized
             movie recommendations subscribe to our newsletter.
