@@ -23,7 +23,6 @@ const SignIn = () => {
       if (response.token) {
         sessionStorage.setItem("token", JSON.stringify(response.token));
         navigate("/");
-        window.location.reload(true);
         toast.success("🦄 Login Successful", {
           position: "bottom-right",
           autoClose: 5000,
@@ -57,6 +56,7 @@ const SignIn = () => {
               onChange={(e) => setName(e.target.value)}
               placeholder="Enter your username"
             />
+
             <Input
               label="Password"
               type="password"
