@@ -64,7 +64,7 @@ const SignIn = () => {
             />
             <p className="mb-2 text-left text-sm text-red-600">{message}</p>
             <Button label="Sign In" />
-            <hr class="my-3 h-1 w-full rounded border-0 bg-gray-200 dark:bg-gray-700"></hr>
+            <hr className="my-3 h-1 w-full rounded border-0 bg-gray-200 dark:bg-gray-700"></hr>
             <p className="text text-teal-500 mt-2  text-center text-sm">
               New to CineCritique?
               <NavLink className="pl-1 text-rainblue-100" to="/signup">
