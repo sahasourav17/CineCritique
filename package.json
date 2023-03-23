@@ -1,9 +1,12 @@
 {
+  "homepage": "http://sahasourav17.github.io/CineCritique",
   "name": "squad-web-app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "start": "react-scripts start",
+    "predeploy" : "npm run build",
+    "deploy" : "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -49,6 +52,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.8",
+    "gh-pages": "^5.0.0",
     "husky": "^8.0.1",
     "postcss": "^8.4.14",
     "prettier": "^2.7.1",
