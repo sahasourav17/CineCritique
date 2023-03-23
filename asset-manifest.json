@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/CineCritique/static/css/main.f4c51b19.css",
-    "main.js": "/CineCritique/static/js/main.ca7f900f.js",
+    "main.css": "/CineCritique/static/css/main.e8c3c18e.css",
+    "main.js": "/CineCritique/static/js/main.5e16e9c3.js",
     "static/js/787.70011376.chunk.js": "/CineCritique/static/js/787.70011376.chunk.js",
     "static/media/logo.png": "/CineCritique/static/media/logo.20a151504ea923d465ac.png",
     "index.html": "/CineCritique/index.html",
-    "main.f4c51b19.css.map": "/CineCritique/static/css/main.f4c51b19.css.map",
-    "main.ca7f900f.js.map": "/CineCritique/static/js/main.ca7f900f.js.map",
+    "main.e8c3c18e.css.map": "/CineCritique/static/css/main.e8c3c18e.css.map",
+    "main.5e16e9c3.js.map": "/CineCritique/static/js/main.5e16e9c3.js.map",
     "787.70011376.chunk.js.map": "/CineCritique/static/js/787.70011376.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f4c51b19.css",
-    "static/js/main.ca7f900f.js"
+    "static/css/main.e8c3c18e.css",
+    "static/js/main.5e16e9c3.js"
   ]
 }
