@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/CineCritique/static/css/main.d494ead4.css",
-    "main.js": "/CineCritique/static/js/main.1b53260c.js",
+    "main.js": "/CineCritique/static/js/main.1cb6db08.js",
     "static/js/787.70011376.chunk.js": "/CineCritique/static/js/787.70011376.chunk.js",
     "static/media/logo.png": "/CineCritique/static/media/logo.20a151504ea923d465ac.png",
     "index.html": "/CineCritique/index.html",
     "main.d494ead4.css.map": "/CineCritique/static/css/main.d494ead4.css.map",
-    "main.1b53260c.js.map": "/CineCritique/static/js/main.1b53260c.js.map",
+    "main.1cb6db08.js.map": "/CineCritique/static/js/main.1cb6db08.js.map",
     "787.70011376.chunk.js.map": "/CineCritique/static/js/787.70011376.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d494ead4.css",
-    "static/js/main.1b53260c.js"
+    "static/js/main.1cb6db08.js"
   ]
 }
