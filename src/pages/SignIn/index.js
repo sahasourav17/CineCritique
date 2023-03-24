@@ -22,7 +22,6 @@ const SignIn = () => {
       );
       if (response.token) {
         sessionStorage.setItem("token", JSON.stringify(response.token));
-        navigate("/");
         toast.success("🦄 Login Successful", {
           position: "bottom-right",
           autoClose: 5000,
@@ -33,6 +32,8 @@ const SignIn = () => {
           progress: undefined,
           theme: "light",
         });
+        navigate("/");
+        window.location.reload(true);
       } else {
         setMessage("Please try again.");
       }
